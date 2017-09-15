@@ -29,7 +29,7 @@ import os
 import datetime
 import random
 
-logPath = '/home/fujishig/logs/irqLogs2/'
+logPath = '/var/log/irqLogs/'
 startDate = datetime.datetime(2014, 9, 8, 16, 44)
 endDate = datetime.datetime(2014, 10, 31, 0, 0)
 delta =  datetime.timedelta(minutes=1)
