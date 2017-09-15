@@ -37,7 +37,7 @@ def set_affinity(irqId,affinity):
     attributes = {'cpu':affinity}
     req = requests.put(_url('/irqsummary/'+str(irqId)),data={'cpu' : affinity})
     if 'old affinity' in req.json():
-        print("Affinity for",irqId,"changed from",req.json()['old affinity'],"to",req.json()['new affinity'])
+        print("Affinity for IRQ %s changed from %s to %s" % (irqId, req.json()['old affinity'],req.json()['new affinity']))
     if 'message' in req.json():
         print(req.json()['message'])
 
