@@ -14,13 +14,11 @@ in the window.
 
 The REST API supports:
 
-GET on /irqsummary:
+1. GET on /irqsummary:
 Takes two parameters, 'start' and 'stop.'  returns the number of interrupts for all valid IRQs per CPU within the window.
-
-GET on /irqsummary/<irq-id>:
+2. GET on /irqsummary/IRQID:
 Returns the current affinity of the specified irq-id.
-
-PUT on /irqsummary/<irq-id>:
+3. PUT on /irqsummary/IRQID:
 Takes one key, 'cpu' and changes the affinity of the specified irq-id.  The only valid values are 1 and 2, corresponding
 to CPU0 and CPU1.
 
