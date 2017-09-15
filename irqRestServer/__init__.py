@@ -70,7 +70,7 @@ def get_irq(irq_id):
 @app.route('/irqsummary/<int:irq_id>', methods=['PUT'])
 def update_affinity(irq_id):
     current_aff = irqGetAffinity(irq_id)
-    print(request.values.keys())
+    #print(request.values.keys())
     if current_aff:
         if 'cpu' in request.values:
             cpuNum = request.values['cpu']

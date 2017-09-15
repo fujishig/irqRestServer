@@ -52,17 +52,17 @@ if __name__ == "__main__":
     1 : get summary of interrupts since last reboot\n\
     2 : get summary of interrupts in a specified time\n\
     3 : set an IRQ's affinity to a specific CPU")
-        option = str(input("enter: " ))
+        option = raw_input("enter: " )
         if option in ["1","2","3"]:
             if option == "1":
                 get_summary() 
             if option == "2":
-                start = input("Please enter a start date in mmddHHMM format: ")
-                stop = input("Please enter a stop date in mmddHHMM format: ")
+                start = raw_input("Please enter a start date in mmddHHMM format: ")
+                stop = raw_input("Please enter a stop date in mmddHHMM format: ")
                 get_interrupts(start,stop)
             if option == "3":
-                irq = input("Please enter a valid IRQ number: ")
-                cpu = input("Please enter a valide CPU number (enter 1 for cpu0, 2 for cpu1): ")
+                irq = raw_input("Please enter a valid IRQ number: ")
+                cpu = raw_input("Please enter a valide CPU number (enter 1 for cpu0, 2 for cpu1): ")
                 set_affinity(irq,cpu)
             running = False 
         else:
