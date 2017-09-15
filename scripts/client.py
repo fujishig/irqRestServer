@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """ client.py, a client to connect to irqRestServer
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     1 : get summary of interrupts since last reboot\n\
     2 : get summary of interrupts in a specified time\n\
     3 : set an IRQ's affinity to a specific CPU")
-        option = input("enter: " )
+        option = str(input("enter: " ))
         if option in ["1","2","3"]:
             if option == "1":
                 get_summary() 

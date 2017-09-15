@@ -5,7 +5,7 @@ WARNING:  there is no authentication involved so this is for testing purposes on
 
 ## Getting Started
 
-Python is required before installation.
+Python and pip are required before installation.
 
 ### Installing
 
